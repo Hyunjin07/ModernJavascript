@@ -39,17 +39,17 @@
         handleEvent(event) {
           switch (event.type) {
             case "mousedown":
-              result.InnerHTML = "마우스 버튼 누름";
+              result.innerHTML = "마우스 버튼 누름";
               break;
             case "mouseup":
-              result.InnerHTML = "마우스 버튼 놓음";
+              result.innerHTML = "마우스 버튼 놓음";
               break;
           }
         }
       }
       var mouse = new Mouse();
-      btnclk.addEventListener("mousdownn", mouse);
-      btnclk.addEventListener("mousup", mouse);
+      btnclk.addEventListener("mousedown", mouse);
+      btnclk.addEventListener("mouseup", mouse);
     </script>
   </body>
 </html>

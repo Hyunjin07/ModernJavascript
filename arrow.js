@@ -50,3 +50,24 @@ const arr2 = ["python", "react", "C++"];
 const arr3 = [...arr1, ...arr2];
 
 console.log(arr3);
+
+// let {a,b} = {a:값1, b:값2};
+
+let user = {
+  //   id: "jamsu",
+  //   pw: "1234",
+  name: "lch",
+  age: 20,
+};
+
+//let id = user.id;
+//let pw = user.pw;
+//let name = user.name;
+//let age = user.age;
+
+// let { id, pw, name, age } = { id: "jamsu", pw: "1234", name: "lch", age: 20 };
+let { id = "guest", pw = "1111", name, age } = user;
+console.log(id);
+console.log(pw);
+console.log(name);
+console.log(age);

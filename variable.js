@@ -25,11 +25,40 @@
 // bigger = 100 < 50;
 // console.log(bigger);
 
-function myTest() {
-  if (true) {
-    const x = { name: "kim", age: 20 }; // 주소값이 cost가 되었기 때문에 안전성 보장
-    x = 200;
-  }
-  console.log(x);
-}
-myTest();
+//변수
+// function myTest() {
+//   if (true) {
+//     const x = { name: "kim", age: 20 }; // 주소값이 cost가 되었기 때문에 안전성 보장
+//     x = 200;
+//   }
+//   console.log(x);
+// }
+// myTest();
+
+//템플릿 문자열
+
+// const name = "정다은";
+// const age = 25;
+
+// const height = 165.5;
+
+// console.log(
+//   "My name is " +
+//     name +
+//     "\n" +
+//     "My age is " +
+//     age +
+//     "\n" +
+//     "My height is " +
+//     height
+// );
+
+// console.log(`My name is ${name}
+// My age is ${age}
+// My height is ${height}`);
+
+const say = `안녕맨은 나에게 이렇게 말했다.  "안녕"`;
+const intro = `I'm a programmer`;
+
+console.log(say);
+console.log(intro);

@@ -1,31 +1,38 @@
 const id = "jamsu";
 const pw = "1111";
 
-function pro1() {
+const pro1 = (pid) => {
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
-      //resolve("success");
-      reject("pro1 fail");
+      if (pid == "jamsu") {
+        resolve("id success");
+      } else {
+        reject("id fail");
+      }
     }, 1000);
   });
-}
+};
 
-function pro2() {
+const pro2 = (ppw) => {
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
-      resolve("pro2 success");
+      if (ppw == "1111") {
+        resolve("pw success");
+      } else {
+        reject("pw fail");
+      }
     }, 1000);
   });
-}
+};
 
 //프로미스의 체이닝
-pro1()
+pro1(id)
   .then(function (result) {
     console.log("result", result);
-    return pro2();
+    return pro2(pw);
   })
   .catch(function (err) {
-    console.log("err", err);
+    return Promise.reject(err);
   })
   .then(function (result) {
     console.log("result2", result);

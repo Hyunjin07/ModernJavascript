@@ -54,8 +54,8 @@ console.log(arr3);
 // let {a,b} = {a:값1, b:값2};
 
 let user = {
-  //   id: "jamsu",
-  //   pw: "1234",
+  id: "jamsu",
+  pw: "1234",
   name: "lch",
   age: 20,
 };
@@ -66,7 +66,9 @@ let user = {
 //let age = user.age;
 
 // let { id, pw, name, age } = { id: "jamsu", pw: "1234", name: "lch", age: 20 };
-let { id = "guest", pw = "1111", name, age } = user;
+// let { id = "guest", pw = "1111", name, age } = user; //기본값 무시
+
+let {id, ...rest} = user;
 console.log(id);
 console.log(pw);
 console.log(name);
